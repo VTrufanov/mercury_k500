@@ -301,10 +301,9 @@ int getU(int ttyd, P3V* U)
 	{
 		// Check and decode result
 		int checkResult = checkResult_3x3b(buf, len);
-		float k = 1.73;
 		if (OK == checkResult)
 		{
-			Result_3x3b* res = (Result_3x3b*)buf*k;
+			Result_3x3b* res = (Result_3x3b*)buf;
 			U->p1 = B3F(res->p1, 100.0);
 			U->p2 = B3F(res->p2, 100.0);
 			U->p3 = B3F(res->p3, 100.0);
