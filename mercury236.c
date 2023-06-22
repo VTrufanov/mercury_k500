@@ -304,7 +304,7 @@ int getU(int ttyd, P3V* U)
 		if (OK == checkResult)
 		{
 			Result_3x3b* res = (Result_3x3b*)buf;
-			U->p1 = B3F(res->p1, 100.0);
+			U->p1 = B3F(res->p1, 173.0);
 			U->p2 = B3F(res->p2, 100.0);
 			U->p3 = B3F(res->p3, 100.0);
 		}
@@ -344,7 +344,7 @@ int getI(int ttyd, P3V* I)
 		if (OK == checkResult)
 		{
 			Result_3x3b* res = (Result_3x3b*)buf;
-			I->p1 = B3F(res->p1, 1000.0);
+			I->p1 = B3F(res->p1, 500000.0);
 			I->p2 = B3F(res->p2, 1000.0);
 			I->p3 = B3F(res->p3, 1000.0);
 		}
