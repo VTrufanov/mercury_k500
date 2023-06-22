@@ -85,7 +85,7 @@ void printOutput(int format, OutputBlock o, int header)
 	{
 		case OF_HUMAN:
 			printf("  Mains status:                         %8s\n\r", (o.ms) ? "On" : "Off");
-			printf("  Voltage (V):             		%8.2f %8.2f %8.2f\n\r", (o.U.p1)*100, o.U.p2, o.U.p3);
+			printf("  Voltage (V):             		%8.2f %8.2f %8.2f\n\r", o.U.p1, o.U.p2, o.U.p3);
 			printf("  Current (A):             		%8.2f %8.2f %8.2f\n\r", o.I.p1, o.I.p2, o.I.p3);
 			printf("  Cos(f):                  		%8.2f %8.2f %8.2f (%8.2f)\n\r", o.C.p1, o.C.p2, o.C.p3, o.C.sum);
 			printf("  Frequency (Hz):          		%8.2f\n\r", o.f);
