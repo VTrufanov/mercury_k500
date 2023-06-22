@@ -303,8 +303,8 @@ int getU(int ttyd, P3V* U)
 		int checkResult = checkResult_3x3b(buf, len);
 		if (OK == checkResult)
 		{
-			Result_3x3b* res = (Result_3x3b*)buf;
-			U->p1*1.73 = B3F(res->p1, 100.0);
+			Result_3x3b* res = ((Result_3x3b*)buf)*1.73;
+			U->p1 = B3F(res->p1, 100.0);
 			U->p2 = B3F(res->p2, 100.0);
 			U->p3 = B3F(res->p3, 100.0);
 		}
